@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+
 import { CardGroup, Container } from 'react-bootstrap';
+import useService from '../../../../hooks/useService';
 import ServiceDetail from './ServiceDetail';
 
 const Service = () => {
-    const [services, setServices] = useState([]);
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setServices(data));
-    }, [])
-
+    const [services] = useService();
     return (
         <div>
             <Container className='mt-5'>

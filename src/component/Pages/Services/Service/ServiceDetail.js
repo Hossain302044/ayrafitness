@@ -5,16 +5,17 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
 const ServiceDetail = props => {
-    const { id, title, picture, Discriptions } = props.serviceDetails;
+    const { id, price, title, picture, Discriptions } = props.serviceDetails;
     const navigate = useNavigate();
     const navigateToServiceDetails = id => {
-        navigate(`/service/${id}`)
+        navigate(`/checkout/${id}`)
     }
     return (
         <>
             <Card>
                 <Card.Img variant="top" src={picture} />
                 <Card.Body>
+                    <p className='text-center'><span className='price-tag'>${price}/</span>mo</p>
                     <Card.Title className='fw-bold text-center'>{title}</Card.Title>
                     <Card.Text className='text-center'>
                         {Discriptions.slice(0, 130)}

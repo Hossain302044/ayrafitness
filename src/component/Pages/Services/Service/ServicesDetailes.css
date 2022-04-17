@@ -1,0 +1,9 @@
+.card-price{
+    gap: 30px;
+}
+.card-design{
+    border: 1px solid gray !important;
+}
+.price-tag{
+    font-size: 50px;
+}
