@@ -1,19 +1,19 @@
 [
     {
       "id": "1",
-      "picture": "https://ibb.co/wdNcCpB",
+      "picture": "./images/01.jpg",
       "title": "Does Your Life Lack Meaning",
       "Discriptions": "The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing to do with luck, coincidence or fate. It really comes down to understanding."
     },
     {
       "id": "2",
-      "picture": "https://ibb.co/98FxKqJ",
+      "picture": "./images/02.jpg",
       "title": "Does Your Life Lack Meaning",
       "Discriptions": "The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing to do with luck, coincidence or fate. It really comes down to understanding."
     },
     {
       "id": "3",
-      "picture": "https://ibb.co/kM61Z1F",
+      "picture": "./images/03.jpg",
       "title": "Does Your Life Lack Meaning",
       "Discriptions": "The first thing to remember about success is that it is a process – nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing to do with luck, coincidence or fate. It really comes down to understanding."
     }

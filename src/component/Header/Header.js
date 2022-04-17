@@ -13,7 +13,7 @@ const Header = () => {
     const [user] = useAuthState(auth);
     return (
         <div>
-            <Navbar bg="light" expand="lg" sticky="top">
+            <Navbar bg="light" expand="lg" sticky='top'>
                 <Container>
                     <Navbar.Brand as={Link} to="/" className='fw-bold'><span className='text-blue-color'>Ayra</span>Fitness</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />

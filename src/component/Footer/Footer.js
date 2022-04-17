@@ -78,11 +78,12 @@ const Footer = () => {
                         </div>
                     </Col>
                 </Row>
+                <hr />
                 <Row>
                     <Col>
-                        <footer className='text-center'>
-                            <p className=''>
-                                <small>Copywrite © {year} AyraFitness</small>
+                        <footer>
+                            <p>
+                                <small>Copywrite © {year} AyraFitness. Develop By Hossain Ahmed</small>
                             </p>
                         </footer>
                     </Col>
