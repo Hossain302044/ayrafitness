@@ -8,7 +8,7 @@ import Blog from './component/Pages/Blogs/Blog/Blog';
 import Contact from './component/Pages/Contact/Contact';
 import NotFound from './component/Pages/NotFound/NotFound';
 import Login from './component/Pages/Login/Login';
-import Signout from './component/Pages/Signout/Signout';
+import Signup from './component/Pages/Home/Signup/Signup';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/signout' element={<Signout></Signout>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
