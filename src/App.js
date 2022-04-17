@@ -9,6 +9,7 @@ import Contact from './component/Pages/Contact/Contact';
 import NotFound from './component/Pages/NotFound/NotFound';
 import Login from './component/Pages/Login/Login';
 import Signup from './component/Pages/Home/Signup/Signup';
+import Footer from './component/Footer/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
