@@ -9,3 +9,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - socail media link
 - blog page
 - subcribe
+
+
+## using for website
+
+- Raact
+- React Router
+- Bootstarp
+- Google Firebase
+- React Tostify
+- Html & CSS
+- Firebase Hooks
