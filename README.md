@@ -1,6 +1,6 @@
 # Getting Started with Create AyraFitness
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [AyraFitness](https://ayra-fitness.web.app/).
 
 ## Features
 
