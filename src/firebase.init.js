@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBhdsLrytFNoeXLEkxdajlY6UIBo1jZNMs",
-    authDomain: "ayra-fitness.firebaseapp.com",
-    projectId: "ayra-fitness",
-    storageBucket: "ayra-fitness.appspot.com",
-    messagingSenderId: "913727787426",
-    appId: "1:913727787426:web:94be8bc2999b58233462fb"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
