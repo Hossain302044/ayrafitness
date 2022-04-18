@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
-    const [data, setData] = useState('')
     const firstNameRef = useRef('');
     const lastNameRef = useRef('');
     const cityRef = useRef('');
@@ -13,13 +12,6 @@ const Checkout = () => {
     const zipRef = useRef('');
     const { checkoutId } = useParams();
     const [validated, setValidated] = useState(false);
-
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setData(data));
-    }, [])
-    console.log(data)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -105,7 +97,11 @@ const Checkout = () => {
                             <Button type="submit">Submit</Button>
                         </Form>
                     </Col>
-                    <Col md={5}></Col>
+                    <Col md={5}>
+                        <div className='d-flex justify-content-center'>
+                            <h2>Service id:{checkoutId}</h2>
+                        </div>
+                    </Col>
                     <ToastContainer />
                 </Row>
             </Container>
