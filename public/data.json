@@ -3,21 +3,21 @@
       "id": "1",
       "picture": "./images/01.jpg",
       "price": 9,
-      "title": "Bodybuilding Training Session",
+      "title": "Group Training Session",
       "Discriptions": "If you are not sure where to start if you are ready to get in shape, AyraFitness is a great starting point. This guided, complete transformation journey covers every corner of fitness."
     },
     {
       "id": "2",
       "picture": "./images/02.jpg",
       "price": 12,
-      "title": "Weight Lifting",
+      "title": "Personal Training Session",
       "Discriptions": "Here is a workout designed for beginners. Which takes at least two half-hour sessions per week.Building and maintaining muscle is essential for all of us, especially as we age. And the earlier we start, the better."
     },
     {
       "id": "3",
       "picture": "./images/03.jpg",
       "price": 18,
-      "title": "Full-Body Strength",
+      "title": "Home Training Session",
       "Discriptions": "The following some tricks are strength training exercises that you have seen before. Alone, they work out a set group of muscles, but with one minute interval, these nine exercises become a complete, whole-body workout."
     }
   ]
