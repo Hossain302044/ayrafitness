@@ -16,7 +16,7 @@ const Footer = () => {
                 <Row>
                     <Col md={3}>
                         <h4 className='fw-bold'>About us</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa velit perspiciatis</p>
+                        <p>We provide you with best service of health.</p>
                         <div className='footer-socail-icons d-flex'>
                             <div className='footer-socail-icon'>
                                 <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>

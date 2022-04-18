@@ -1,17 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
+    const [data, setData] = useState('')
+    const firstNameRef = useRef('');
+    const lastNameRef = useRef('');
+    const cityRef = useRef('');
+    const stateRef = useRef('');
+    const zipRef = useRef('');
     const { checkoutId } = useParams();
     const [validated, setValidated] = useState(false);
-    console.log(checkoutId)
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setData(data));
+    }, [])
+    console.log(data)
 
     const handleSubmit = (event) => {
+        event.preventDefault();
+        const firstName = firstNameRef.current.value;
+        const lastName = lastNameRef.current.value;
+        const city = cityRef.current.value;
+        const state = stateRef.current.value;
+        const zip = zipRef.current.value;
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+        }
+        if (firstName && lastName && city && state && zip) {
+            toast('Thanks for Your Order!!!');
         }
 
         setValidated(true);
@@ -26,6 +49,7 @@ const Checkout = () => {
                                 <Form.Group as={Col} md="6" controlId="validationCustom01">
                                     <Form.Label>First name</Form.Label>
                                     <Form.Control
+                                        ref={firstNameRef}
                                         required
                                         type="text"
                                         placeholder="First name"
@@ -35,6 +59,7 @@ const Checkout = () => {
                                 <Form.Group as={Col} md="6" controlId="validationCustom02">
                                     <Form.Label>Last name</Form.Label>
                                     <Form.Control
+                                        ref={lastNameRef}
                                         required
                                         type="text"
                                         placeholder="Last name"
@@ -45,21 +70,21 @@ const Checkout = () => {
                             <Row className="mb-3">
                                 <Form.Group as={Col} md="6" controlId="validationCustom03">
                                     <Form.Label>City</Form.Label>
-                                    <Form.Control type="text" placeholder="City" required />
+                                    <Form.Control type="text" ref={cityRef} placeholder="City" required />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid city.
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} md="3" controlId="validationCustom04">
                                     <Form.Label>State</Form.Label>
-                                    <Form.Control type="text" placeholder="State" required />
+                                    <Form.Control type="text" ref={stateRef} placeholder="State" required />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid state.
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} md="3" controlId="validationCustom05">
                                     <Form.Label>Zip</Form.Label>
-                                    <Form.Control type="text" placeholder="Zip" required />
+                                    <Form.Control type="text" ref={zipRef} placeholder="Zip" required />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid zip.
                                     </Form.Control.Feedback>
@@ -81,6 +106,7 @@ const Checkout = () => {
                         </Form>
                     </Col>
                     <Col md={5}></Col>
+                    <ToastContainer />
                 </Row>
             </Container>
         </div>
